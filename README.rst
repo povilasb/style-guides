@@ -33,6 +33,7 @@ Namespaces
 -----------
 
 ::
+
         namespace log
         {
 
@@ -45,6 +46,7 @@ Classes
 -------
 
 ::
+
         class Employee : public Person {
         public:
                 Employee(const std::string& name, const std::string& profession);
@@ -61,11 +63,13 @@ Enums
 -----
 
 ::
+
         enum Severity_level {
                 debug, info, warning, error
         }
 
 Or ::
+
         enum Severity_level {
                 debug,  // Most verbose logs.
                 info, // General info logs.
@@ -91,6 +95,7 @@ If, else
 --------
 
 ::
+
         bool success = false;
         ...
         if (success) {
