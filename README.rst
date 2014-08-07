@@ -200,3 +200,30 @@ parameters.
         {
                 return this->port_;
         }
+
+
+Misc
+====
+
+
+Accessing class members
++++++++++++++++++++++++
+
+When accessing private class members always refer to them via ``this``::
+
+
+        class Person {
+        public:
+                std::string
+                name() const
+                {
+                        return this->name_;
+                }
+
+        private:
+                std::string name_;
+
+        };
+
+This makes it clear where variable ``name_`` came from without furhter
+code investigation.
