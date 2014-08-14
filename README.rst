@@ -1,9 +1,9 @@
-.. highlight:: c++
-        :linenothreshold: 5
-
 ======================
 C++ coding style guide
 ======================
+
+.. highlight:: c++
+        :linenothreshold: 5
 
 Why yet another C++ coding style? Because there is no standard style. Each
 company, organization has it's own. Most of them don't satisfy me. They are
@@ -167,6 +167,18 @@ Private class fields end with underscore::
         private:
                 unsigned int port_;
         };
+
+
+Constants
++++++++++
+
+Use same naming convention as for usual variables, no UPPER CASE NAMES::
+
+	class Http_server {
+	public:
+		static const std::string protocol_version = "1.1";
+	...
+	};
 
 
 Setter, getter methods
