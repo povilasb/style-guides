@@ -126,6 +126,15 @@ Naming
 ======
 
 
+Macros
+------
+
+In general, macros should be avoided, but if you have ones, you should
+capitalize them::
+
+	#define VERSION 0x010A03
+
+
 Classes, enums
 --------------
 
