@@ -20,7 +20,9 @@ Formatting
 Lines
 -----
 
-Maximum of 80 charactes should be used on a single line.
+Maximum of 80 charactes should be used on a single line. Why?:
+
+* Humans read narrower columns faster.
 
 
 Indentation
