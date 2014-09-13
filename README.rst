@@ -223,6 +223,19 @@ parameters.
         }
 
 
+Exceptions
+==========
+
+Catch exceptions by reference:
+
+	try {
+		// ...
+	}
+	catch (const std::runtime_error& e) {
+		// ...
+	}
+
+
 Misc
 ====
 
