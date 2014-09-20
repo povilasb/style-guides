@@ -225,8 +225,23 @@ parameters.
         }
 
 
+Error handling
+==============
+
+Different forms of error reporting should be used as follows:[#f1]_
+
+* *Static assertions* To prevent invalid instantiations of templates and to
+  check other compile-time conditions.
+* *Exceptions* To let some calling code know that a function was unable to
+  fulfil its contract due to some run-time problems.
+* *Error codes* To report run-time conditions that are part of a function's
+  contract and considered normal behavior.
+* *Run-time assertions* To perform sanity checks on internal operations at
+  run-time and ensure that major bugs do not enter production builds.
+
+
 Exceptions
-==========
+----------
 
 Catch exceptions by reference:
 
@@ -269,3 +284,8 @@ TODO
 ====
 
 * In source documentation: do not document what's obvious. E.g. std::string get_name();
+
+
+.. rubric:: References
+
+.. [#f1] http://josephmansfield.uk/articles/exceptions-error-codes-assertions-c++.html
