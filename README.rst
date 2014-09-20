@@ -263,3 +263,9 @@ When accessing private class members always refer to them via ``this``::
 
 This makes it clear where variable ``name_`` came from without furhter
 code investigation.
+
+
+TODO
+====
+
+* In source documentation: do not document what's obvious. E.g. std::string get_name();
