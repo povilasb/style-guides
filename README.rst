@@ -128,6 +128,13 @@ Naming
 ======
 
 
+Files
+-----
+
+To easier distinguish between C and C++ code header files should be named
+`*.hpp` and source files `*.cpp`.
+
+
 Macros
 ------
 
