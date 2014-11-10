@@ -23,6 +23,7 @@ Lines
 Maximum of 80 charactes should be used on a single line. Why?:
 
 * Humans read narrower columns faster.
+* http://www.emacswiki.org/emacs/EightyColumnRule
 
 
 Indentation
