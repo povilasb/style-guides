@@ -284,8 +284,8 @@ When accessing private class members always refer to them via ``this``::
 
         };
 
-This makes it clear where variable ``name_`` came from without furhter
-code investigation.
+This makes it clear where variable ``name_`` came from without further
+code investigation. And aoids errors in some situations [#f2]_.
 
 
 TODO
@@ -297,3 +297,4 @@ TODO
 .. rubric:: References
 
 .. [#f1] http://josephmansfield.uk/articles/exceptions-error-codes-assertions-c++.html
+.. [#f2] http://www.parashift.com/c++-faq-lite/nondependent-name-lookup-members.html
