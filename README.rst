@@ -3,7 +3,7 @@ C++ coding style guide
 ======================
 
 .. highlight:: c++
-        :linenothreshold: 5
+	:linenothreshold: 5
 
 Why yet another C++ coding style? Because there is no standard style. Each
 company, organization has it's own. Most of them don't satisfy me. They are
@@ -37,12 +37,12 @@ Namespaces
 
 ::
 
-        namespace log
-        {
+	namespace log
+	{
 
-        ...
+	...
 
-        }
+	}
 
 
 Classes
@@ -50,16 +50,16 @@ Classes
 
 ::
 
-        class Employee : public Person {
-        public:
-                Employee(const std::string& name, const std::string& profession);
+	class Employee : public Person {
+	public:
+		Employee(const std::string& name, const std::string& profession);
 
-        protected:
-                ...
+	protected:
+		...
 
-        private:
-                ...
-        };
+	private:
+		...
+	};
 
 
 Enums
@@ -67,18 +67,18 @@ Enums
 
 ::
 
-        enum Severity_level {
-                debug, info, warning, error
-        }
+	enum Severity_level {
+		debug, info, warning, error
+	}
 
 Or ::
 
-        enum Severity_level {
-                debug,  // Most verbose logs.
-                info, // General info logs.
-                warning, //Llogs that need attention.
-                error // Something unexpected happened.
-        }
+	enum Severity_level {
+		debug,	// Most verbose logs.
+		info, // General info logs.
+		warning, //Llogs that need attention.
+		error // Something unexpected happened.
+	}
 
 
 Try, catch
@@ -86,12 +86,12 @@ Try, catch
 
 ::
 
-        try {
-                new int[10000000000];
-        }
-        catch (std::bad_alloc e) {
-                cout << e.what() << '\n';
-        }
+	try {
+		new int[10000000000];
+	}
+	catch (std::bad_alloc e) {
+		cout << e.what() << '\n';
+	}
 
 
 If, else
@@ -99,14 +99,14 @@ If, else
 
 ::
 
-        bool success = false;
-        ...
-        if (success) {
-                // on success.
-        }
-        else {
-                // on error.
-        }
+	bool success = false;
+	...
+	if (success) {
+		// on success.
+	}
+	else {
+		// on error.
+	}
 
 
 Switch
@@ -114,15 +114,15 @@ Switch
 
 ::
 
-        switch (http_method) {
-        HTTP_GET:
-                break;
+	switch (http_method) {
+	HTTP_GET:
+		break;
 
-        HTTP_POST:
-                breaj;
+	HTTP_POST:
+		breaj;
 
-        default:
-        }
+	default:
+	}
 
 
 Naming
@@ -155,13 +155,13 @@ between standard c++, Boost and your project specific classes.
 
 ::
 
-        class Http_server {
-        ...
-        };
+	class Http_server {
+	...
+	};
 
-        enum Http_methods {
-        ...
-        };
+	enum Http_methods {
+	...
+	};
 
 
 Class fields, methods
@@ -171,10 +171,10 @@ They start with lower case letters and each word is separated with underscore.
 
 ::
 
-        class Http_server {
-        public:
-                void set_uri_handler(...);
-        };
+	class Http_server {
+	public:
+		void set_uri_handler(...);
+	};
 
 
 Private fields
@@ -182,10 +182,10 @@ Private fields
 
 Private class fields end with underscore::
 
-        class Http_server {
-        private:
-                unsigned int port_;
-        };
+	class Http_server {
+	private:
+		unsigned int port_;
+	};
 
 
 Constants
@@ -209,28 +209,28 @@ parameters.
 
 ::
 
-        class Http_server {
-        public:
-                void port(unsigned int port_);
-                unsigned int port(void) const;
+	class Http_server {
+	public:
+		void port(unsigned int port_);
+		unsigned int port(void) const;
 
-        private:
-                unsigned int port_;
+	private:
+		unsigned int port_;
 
-        };
+	};
 
 
-        void
-        Http_server::port(unsigned int port_)
-        {
-                this->port_ = port_;
-        }
+	void
+	Http_server::port(unsigned int port_)
+	{
+		this->port_ = port_;
+	}
 
-        unsigned int
-        Http_server::port(void) const
-        {
-                return this->port_;
-        }
+	unsigned int
+	Http_server::port(void) const
+	{
+		return this->port_;
+	}
 
 
 Error handling
@@ -251,7 +251,7 @@ Different forms of error reporting should be used as follows:[#f1]_
 Exceptions
 ----------
 
-Catch exceptions by reference:
+Catch exceptions by reference::
 
 	try {
 		// ...
@@ -266,23 +266,23 @@ Misc
 
 
 Accessing class members
-+++++++++++++++++++++++
+-----------------------
 
 When accessing private class members always refer to them via ``this``::
 
 
-        class Person {
-        public:
-                std::string
-                name() const
-                {
-                        return this->name_;
-                }
+	class Person {
+	public:
+		std::string
+		name() const
+		{
+			return this->name_;
+		}
 
-        private:
-                std::string name_;
+	private:
+		std::string name_;
 
-        };
+	};
 
 This makes it clear where variable ``name_`` came from without further
 code investigation. And aoids errors in some situations [#f2]_.
