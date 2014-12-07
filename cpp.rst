@@ -29,7 +29,7 @@ Maximum of 80 charactes should be used on a single line. Why?:
 Indentation
 -----------
 
-Tabs.
+Tabs. Tab size is 8 spaces.
 
 
 Namespaces
