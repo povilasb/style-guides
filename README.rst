@@ -9,3 +9,4 @@ This repository contains my personal misc coding conventions.
 
 	cpp.rst
 	makefile.rst
+	cmake.rst
