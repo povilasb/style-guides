@@ -50,9 +50,9 @@ Classes
 
 ::
 
-	class Employee : public Person {
+	class employee : public person {
 	public:
-		Employee(const std::string& name, const std::string& profession);
+		employee(const std::string& name, const std::string& profession);
 
 	protected:
 		...
@@ -67,14 +67,14 @@ Enums
 
 ::
 
-	enum Severity_level {
+	enum severity_level {
 		debug, info, warning, error
 	}
 
 Or ::
 
-	enum Severity_level {
-		debug,	// Most verbose logs.
+	enum severity_level {
+		debug, // Most verbose logs.
 		info, // General info logs.
 		warning, //Llogs that need attention.
 		error // Something unexpected happened.
@@ -148,18 +148,17 @@ capitalize them::
 Classes, enums
 --------------
 
-They start with a capital letter but any additional word is separated with an
-unserscore. Underscore_based_classes simply read easier than
-CamelCaseClassNames. And the first capital letter lets easier distinguish
-between standard c++, Boost and your project specific classes.
+Their names consist of all lower case letters and words are separated with an
+unserscore. underscore_based_classes simply read easier than
+CamelCaseClassNames.
 
 ::
 
-	class Http_server {
+	class http_server {
 	...
 	};
 
-	enum Http_methods {
+	enum http_methods {
 	...
 	};
 
@@ -171,7 +170,7 @@ They start with lower case letters and each word is separated with underscore.
 
 ::
 
-	class Http_server {
+	class http_server {
 	public:
 		void set_uri_handler(...);
 	};
@@ -182,7 +181,7 @@ Private fields
 
 Private class fields end with underscore::
 
-	class Http_server {
+	class http_server {
 	private:
 		unsigned int port_;
 	};
@@ -193,7 +192,7 @@ Constants
 
 Use same naming convention as for usual variables, no UPPER CASE NAMES::
 
-	class Http_server {
+	class http_server {
 	public:
 		static const std::string protocol_version = "1.1";
 	...
@@ -209,7 +208,7 @@ parameters.
 
 ::
 
-	class Http_server {
+	class http_server {
 	public:
 		void port(unsigned int port_);
 		unsigned int port(void) const;
@@ -221,7 +220,7 @@ parameters.
 
 
 	void
-	Http_server::port(unsigned int port_)
+	http_server::port(unsigned int port_)
 	{
 		this->port_ = port_;
 	}
@@ -271,7 +270,7 @@ Accessing class members
 When accessing private class members always refer to them via ``this``::
 
 
-	class Person {
+	class person {
 	public:
 		std::string
 		name() const
@@ -285,7 +284,7 @@ When accessing private class members always refer to them via ``this``::
 	};
 
 This makes it clear where variable ``name_`` came from without further
-code investigation. And aoids errors in some situations [#f2]_.
+code investigation. And avoids errors in some situations [#f2]_.
 
 
 TODO
