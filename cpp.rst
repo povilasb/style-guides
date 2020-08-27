@@ -115,10 +115,10 @@ Switch
 ::
 
 	switch (http_method) {
-	HTTP_GET:
+	case HTTP_GET:
 		break;
 
-	HTTP_POST:
+	case HTTP_POST:
 		breaj;
 
 	default:
